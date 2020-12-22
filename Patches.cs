@@ -1,8 +1,9 @@
+using System.IO;
+using System.Linq;
+
 using Gibbed.RED4.ScriptFormats;
 using Gibbed.RED4.ScriptFormats.Definitions;
 using Gibbed.RED4.ScriptFormats.Emit;
-using System.IO;
-using System.Linq;
 
 namespace RED4CGTest
 {

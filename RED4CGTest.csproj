@@ -17,16 +17,25 @@
   <ItemGroup>
     <Compile Remove="modules\**" />
     <Compile Remove="libs\**" />
+    <Compile Remove="test_function_dump\**" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Remove="modules\**" />
     <EmbeddedResource Remove="libs\**" />
+    <EmbeddedResource Remove="test_function_dump\**" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="modules\**" />
     <None Remove="libs\**" />
+    <None Remove="test_function_dump\**" />
+    <None Remove="console_callable_script_functions.txt" />
+    <None Remove="output.redscripts" />
+    <None Remove="PlayerPuppet_functions.txt" />
+    <None Remove="test_enumeration_dump.txt" />
+    <None Remove="test_function_dump.txt" />
+    <None Remove="test_roundtrip.redscripts" />
   </ItemGroup>
 
   <ItemGroup>
