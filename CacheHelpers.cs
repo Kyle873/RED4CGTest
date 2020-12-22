@@ -1,9 +1,8 @@
+using Gibbed.RED4.ScriptFormats;
+using Gibbed.RED4.ScriptFormats.Definitions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using Gibbed.RED4.ScriptFormats;
-using Gibbed.RED4.ScriptFormats.Definitions;
 
 namespace RED4CGTest
 {

@@ -16,26 +16,17 @@
 
   <ItemGroup>
     <Compile Remove="modules\**" />
+    <Compile Remove="libs\**" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Remove="modules\**" />
+    <EmbeddedResource Remove="libs\**" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="modules\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Gibbed.IO, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>modules\Gibbed.RED4\build\Gibbed.IO.dll</HintPath>
-    </Reference>
-    <Reference Include="Gibbed.RED4.FileFormats, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>modules\Gibbed.RED4\build\Gibbed.RED4.FileFormats.dll</HintPath>
-    </Reference>
-    <Reference Include="Gibbed.RED4.ScriptFormats, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>modules\Gibbed.RED4\build\Gibbed.RED4.ScriptFormats.dll</HintPath>
-    </Reference>
+    <None Remove="libs\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +34,10 @@
     <Content Include="ItemHashes.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="libs\Gibbed.RED4\projects\Gibbed.RED4.ScriptFormats\Gibbed.RED4.ScriptFormats.csproj" />
   </ItemGroup>
 
 </Project>

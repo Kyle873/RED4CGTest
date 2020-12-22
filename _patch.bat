@@ -1,17 +1,18 @@
 @echo off
-color A
+color F
 
 set BINPATH=build\net5.0
+set GIBPATH=libs\Gibbed.RED4\build
 set CPPATH="C:\Program Files (x86)\Steam\steamapps\common\Cyberpunk 2077"
 
 echo Patching...
-%BINPATH%\RED4CGTest %CDPATH%\r6\cache\final.redscripts
+%BINPATH%\RED4CGTest %CPPATH%\r6\cache\final.redscripts
 
 echo Dumping...
-%BINPATH%\ScriptCacheDumpTest %BINPATH%\RED4KMod.redscripts
+%GIBPATH%\ScriptCacheDumpTest output.redscripts
 
 echo Copying...
-xcopy /Y %BINPATH%\output.redscripts %CPPATH%\r6\cache\final.redscripts
+xcopy /Y output.redscripts %CPPATH%\r6\cache\final.redscripts
 
 echo Done!
 pause
