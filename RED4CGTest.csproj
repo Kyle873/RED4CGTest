@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>build</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>build</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Gibbed.IO, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>modules\Gibbed.RED4\build\Gibbed.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Gibbed.RED4.FileFormats, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>modules\Gibbed.RED4\build\Gibbed.RED4.FileFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Gibbed.RED4.ScriptFormats, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>modules\Gibbed.RED4\build\Gibbed.RED4.ScriptFormats.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ItemHashes.txt" />
+    <Content Include="ItemHashes.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
